@@ -161,10 +161,10 @@ if (hVideo) {
   const pathPrefix = isFrontend ? "../" : "";
 
   const videoFiles = [
-    pathPrefix + "home vid/VID-20260126-WA0032.mp4",
-    pathPrefix + "assets/videos/video1.mp4",
-    pathPrefix + "assets/videos/video2.mp4",
-    pathPrefix + "assets/videos/video3.mp4",
+    pathPrefix + "VID-20260126-WA0032.mp4",
+    pathPrefix + "video1.mp4",
+    pathPrefix + "video2.mp4",
+    pathPrefix + "video3.mp4",
   ];
   /* 
     // Video Slideshow Disabled for Single Video Loop
@@ -220,3 +220,5 @@ window.closeModal = function () {
     slides[idx].classList.add("active");
   }, 5000);
 })();
+
+
