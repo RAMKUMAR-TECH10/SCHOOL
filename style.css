@@ -319,14 +319,14 @@ body.loaded {
 }
 
 /* Arrow Indicator */
-.dropdown > a::after {
+.dropdown>a::after {
   content: " ▼";
   font-size: 10px;
   margin-left: 5px;
   opacity: 0.7;
 }
 
-.dropdown > a:hover::after {
+.dropdown>a:hover::after {
   color: var(--primary-color);
   opacity: 1;
 }
@@ -382,7 +382,8 @@ body.loaded {
 
 /* HERO */
 .hero {
-  height: 55vh; /* reduced further (about 20% less than 75vh) */
+  height: 55vh;
+  /* reduced further (about 20% less than 75vh) */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -393,7 +394,9 @@ body.loaded {
 }
 
 @media (max-width: 768px) {
-  .hero { height: 40vh; }
+  .hero {
+    height: 40vh;
+  }
 }
 
 .hero-video {
@@ -412,21 +415,25 @@ body.loaded {
 }
 
 .hero-overlay {
-  position: absolute; /* contain overlay within .hero */
+  position: absolute;
+  /* contain overlay within .hero */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 1; /* overlay sits above slides */
+  z-index: 1;
+  /* overlay sits above slides */
 }
 
 /* HERO SLIDESHOW */
 .hero-slides {
   position: absolute;
   inset: 0;
-  z-index: 0; /* behind overlay (1) and content (2) */
+  z-index: 0;
+  /* behind overlay (1) and content (2) */
 }
+
 .hero-slides .slide {
   position: absolute;
   inset: 0;
@@ -436,6 +443,7 @@ body.loaded {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
 .hero-slides .slide.active {
   opacity: 1;
 }
@@ -444,7 +452,10 @@ body.loaded {
   .loader-logo {
     width: 160px;
   }
-  .hero-slides .slide { background-position: center center; }
+
+  .hero-slides .slide {
+    background-position: center center;
+  }
 }
 
 .hero-content {
@@ -453,18 +464,22 @@ body.loaded {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center vertically */
+  justify-content: center;
+  /* center vertically */
   align-items: center;
   color: white;
   text-align: center;
   padding: 20px;
-  padding-bottom: 0; /* reset bottom offset when centered */
+  padding-bottom: 0;
+  /* reset bottom offset when centered */
   animation: fadeUp 1.5s ease;
   max-width: 900px;
 }
 
 @media (max-width: 768px) {
-  .hero-content { padding-bottom: 40px; }
+  .hero-content {
+    padding-bottom: 40px;
+  }
 }
 
 .hero h1 {
@@ -480,11 +495,9 @@ body.loaded {
 .btn,
 .nav-menu .btn {
   margin-top: 20px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
   color: #ffffff !important;
   padding: 14px 30px;
   border: none;
@@ -522,9 +535,11 @@ body.loaded {
 .section {
   padding: 60px 0;
   text-align: center;
-  background: transparent; /* make sections flow as a single surface */
+  background: transparent;
+  /* make sections flow as a single surface */
   backdrop-filter: none;
-  margin: 0; /* remove boxed spacing */
+  margin: 0;
+  /* remove boxed spacing */
   border-radius: 0;
   box-shadow: none;
   border: none;
@@ -559,11 +574,9 @@ body.loaded {
   content: "";
   width: 80px;
   height: 4px;
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background: linear-gradient(to right,
+      var(--primary-color),
+      var(--secondary-color));
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -649,7 +662,8 @@ body.loaded {
 /* WHY CHOOSE HAYAGRIVAS - force 3 columns on desktop */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 across on wide screens */
+  grid-template-columns: repeat(3, 1fr);
+  /* exactly 3 across on wide screens */
   gap: 30px;
   margin-top: 40px;
   max-width: 1100px;
@@ -659,21 +673,28 @@ body.loaded {
 }
 
 .why-card {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 28px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 @media (max-width: 992px) {
-  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-  .why-grid { grid-template-columns: 1fr; }
-  .why-card { padding: 20px; }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    padding: 20px;
+  }
 }
 
 /* ISA AWARD box: match width of other content blocks (cards container) */
@@ -681,12 +702,13 @@ body.loaded {
   display: flex;
   align-items: center;
   gap: 30px;
-  max-width: 1100px; /* same inner content width used elsewhere */
+  max-width: 1100px;
+  /* same inner content width used elsewhere */
   margin: 0 auto;
   padding: 20px;
   background: linear-gradient(135deg, #eef6ff, #ffffff);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .isa-box img {
@@ -697,8 +719,15 @@ body.loaded {
 }
 
 @media (max-width: 900px) {
-  .isa-box { flex-direction: column; text-align: center; }
-  .isa-box img { max-width: 60%; width: auto; }
+  .isa-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .isa-box img {
+    max-width: 60%;
+    width: auto;
+  }
 }
 
 /* Hide Fee Payment / Pay Online links across site (removes visibility without editing many pages) */
@@ -731,7 +760,8 @@ footer {
   margin-top: 0;
   display: flex;
   gap: 30px;
-  align-items: center; /* vertically center the columns */
+  align-items: center;
+  /* vertically center the columns */
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -757,8 +787,10 @@ footer {
   text-align: right;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center content inside this column */
-  align-items: flex-end; /* keep items right-aligned */
+  justify-content: center;
+  /* vertically center content inside this column */
+  align-items: flex-end;
+  /* keep items right-aligned */
   gap: 6px;
 }
 
@@ -1156,12 +1188,10 @@ html {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 140, 0, 0.8) 0%,
-    rgba(255, 140, 0, 0.1) 60%,
-    transparent 80%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 140, 0, 0.8) 0%,
+      rgba(255, 140, 0, 0.1) 60%,
+      transparent 80%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.05s linear;
@@ -1170,7 +1200,7 @@ html {
 }
 
 .parallax {
-  background: url("../images/school_building.jpg") center/cover fixed;
+  background: url("campus_aerial.png") center/cover fixed;
   height: 400px;
   position: relative;
   display: flex;
@@ -1273,11 +1303,9 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(
-    circle at center,
-    var(--primary-color),
-    var(--dark-bg)
-  );
+  background: radial-gradient(circle at center,
+      var(--primary-color),
+      var(--dark-bg));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1371,11 +1399,9 @@ html {
   top: 0;
   left: 0;
   height: 6px;
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(to right,
+      var(--primary-color),
+      var(--accent-color));
   width: 0%;
   z-index: 100001;
 }
@@ -1476,7 +1502,7 @@ html {
 /* ===== PARALLAX SECTION DIVIDER ===== */
 .parallax-divider {
   height: 350px;
-  background: url("../images/school_building.jpg") center/cover fixed;
+  background: url("campus_aerial.png") center/cover fixed;
   position: relative;
   display: flex;
   align-items: center;
@@ -1499,111 +1525,64 @@ html {
     height: 250px;
   }
 }
-/ *   H E R O   S L I D E S H O W   * / 
- 
- . h e r o - s l i d e s h o w   { 
- 
-     p o s i t i o n :   a b s o l u t e ; 
- 
-     t o p :   0 ; 
- 
-     l e f t :   0 ; 
- 
-     w i d t h :   1 0 0 % ; 
- 
-     h e i g h t :   1 0 0 % ; 
- 
-     z - i n d e x :   - 2 ; 
- 
- } 
- 
- 
- 
- . s l i d e   { 
- 
-     p o s i t i o n :   a b s o l u t e ; 
- 
-     w i d t h :   1 0 0 % ; 
- 
-     h e i g h t :   1 0 0 % ; 
- 
-     b a c k g r o u n d - s i z e :   c o v e r ; 
- 
-     b a c k g r o u n d - p o s i t i o n :   c e n t e r ; 
- 
-     o p a c i t y :   0 ; 
- 
-     a n i m a t i o n :   s l i d e S h o w   1 5 s   i n f i n i t e   e a s e - i n - o u t ; 
- 
- } 
- 
- 
- 
- . s l i d e : n t h - c h i l d ( 1 )   { 
- 
-     a n i m a t i o n - d e l a y :   0 s ; 
- 
- } 
- 
- 
- 
- . s l i d e : n t h - c h i l d ( 2 )   { 
- 
-     a n i m a t i o n - d e l a y :   5 s ; 
- 
- } 
- 
- 
- 
- . s l i d e : n t h - c h i l d ( 3 )   { 
- 
-     a n i m a t i o n - d e l a y :   1 0 s ; 
- 
- } 
- 
- 
- 
- @ k e y f r a m e s   s l i d e S h o w   { 
- 
-     0 %   { 
- 
-         o p a c i t y :   0 ; 
- 
-         t r a n s f o r m :   s c a l e ( 1 ) ; 
- 
-     } 
- 
-     5 %   { 
- 
-         o p a c i t y :   1 ; 
- 
-         t r a n s f o r m :   s c a l e ( 1 ) ;   / *   S t a r t   f a d e   i n   /   v i s i b l e   * / 
- 
-     } 
- 
-     3 3 %   { 
- 
-         o p a c i t y :   1 ; 
- 
-         t r a n s f o r m :   s c a l e ( 1 . 0 5 ) ;   / *   Z o o m   s l i g h t l y   w h i l e   v i s i b l e   * / 
- 
-     } 
- 
-     3 8 %   { 
- 
-         o p a c i t y :   0 ;   / *   F a d e   o u t   * / 
- 
-     } 
- 
-     1 0 0 %   { 
- 
-         o p a c i t y :   0 ; 
- 
-         t r a n s f o r m :   s c a l e ( 1 ) ; 
- 
-     } 
- 
- } 
- 
- 
 
+/* HERO SLIDESHOW */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 15s infinite ease-in-out;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  5% {
+    opacity: 1;
+    transform: scale(1);
+    /* Start fade in / visible */
+  }
+
+  33% {
+    opacity: 1;
+    transform: scale(1.05);
+    /* Zoom slightly while visible */
+  }
+
+  38% {
+    opacity: 0;
+    /* Fade out */
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
